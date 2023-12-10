@@ -1,16 +1,13 @@
 'usestrict';
 
-// const numbers = [5, 10, 15, 20, 25];
-
-// // Стрілочна анонімна функція
-// numbers.forEach((number, index) => {
-//   console.log(`Index ${index}, value ${number}`);
-// });
-
-const numbers = [5, 10, 15, 20, 25];
-
-const logMessage = (number, index) => {
-  console.log(`Inex ${index}, value ${number}`);
+const foo = (elem, ind, arr) => {
+  console.log(elem ** 2);
+  console.log(ind);
+  console.log(arr);
 };
 
-numbers.forEach(logMessage);
+const num = [3, 2, 5, 9, 1, 7, 4];
+
+num.forEach(foo);
+
+console.log(num);
