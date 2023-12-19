@@ -1,30 +1,10 @@
-'use strict';
+const mergeArrays = (arr1, arr2) => {
+  return arr1
+    .concat(arr2)
+    .sort((a, b) => a - b)
+    .filter((elem, i, arr) => {
+      return arr[i] !== arr[i + 1];
+    });
+};
 
-//-----------------------------------------task--------------------------------------------------//
-//-----------------------------------------task--------------------------------------------------//
-//-----------------------------------------task--------------------------------------------------//
-//-----------------------------------------task--------------------------------------------------//
-//-----------------------------------------task--------------------------------------------------//
-//-----------------------------------------task--------------------------------------------------//
-function solution(str, ending) {
-  return str.includes(ending) ? true : false;
-}
-
-console.log(solution('abcde', 'abc'));
-
-//-----------------------------------------task 1--------------------------------------------------//
-// You get an array of numbers, return the sum of all of the positives ones.
-// Example [1,-4,7,12] => 1 + 7 + 12 = 20
-// Note: if there is nothing to sum, the sum is default to 0.
-
-// function positiveSum(arr) {
-//   let sum = 0;
-//   for (let i = 0; i < arr.length; i++) {
-//     if (arr[i] > 0) {
-//       sum += arr[i];
-//     }
-//   }
-//   return sum;
-// }
-
-// console.log(positiveSum([1, -4, 7, 12]));
+console.log(mergeArrays([1, 3, 3, 5, 7, 9, 10], [10, 8, 6, 4, 2]));
